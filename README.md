@@ -4,11 +4,14 @@ Kahoot botter using the kahootbotter.com api
 <h1>Requirements
 <h2>
 requests
+<h2>
 colorama
+<h2>
 random
 string
 <hr>
 <h1>Proxies
-  
-<h2>If you dont have proxies, take the 10 free ones from https://www.webshare.io/
-  Or Use My Scrapper ofc https://github.com/TripleA26/Proxy-Scrapper
+<h2>
+If you dont have proxies, take the 10 free ones from https://www.webshare.io/
+<h2>
+Or Use My Scrapper ofc https://github.com/TripleA26/Proxy-Scrapper
