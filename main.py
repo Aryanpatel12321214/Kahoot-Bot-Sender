@@ -13,7 +13,6 @@ def send():
         proxy = random.choice(open('proxies.txt', 'r').read().splitlines())
         proxies = {'http': f'http://{proxy}', 'http': f'http://{proxy}'}
         headers = {'authority': 'kahootbotter.com','accept': '*/*','accept-language'   : 'en-US,en;q=0.9','content-type': 'application/json','origin': 'https://kahootbotter.com','referer': 'https://kahootbotter.com/','user-agent': user,}
-        print(user)
         json_data = {
             'operationName': 'spawnBots',
             'variables': {
@@ -25,7 +24,6 @@ def send():
             'query': 'mutation spawnBots($botName: String!, $gamePin: Int!, $botAmount: Int!, $sessionId: String!) {\n  spawnBots(\n    botName: $botName\n    gamePin: $gamePin\n    botAmount: $botAmount\n    sessionId: $sessionId\n  ) {\n    title\n    status\n    description\n    __typename\n  }\n}\n',
         }
         response = requests.post(URL, headers=headers, json=json_data, proxies=proxies)
-        print(response.text)
         try:
             if response.json()['data']['spawnBots']['status'] == 'success':
                 print(f"\n[ {Fore.LIGHTGREEN_EX} + {Fore.RESET} ] {Fore.LIGHTGREEN_EX}{bots} bots have been successfully sended{Fore.RESET}\n")
