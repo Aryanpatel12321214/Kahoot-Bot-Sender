@@ -8,6 +8,7 @@ requests
 colorama
 <h2>
 random
+<h2>
 string
 <hr>
 <h1>Proxies
